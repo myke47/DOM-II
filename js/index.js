@@ -51,6 +51,7 @@ myNav.addEventListener('mouseover', function (event) {
     setTimeout(function(){
         event.target.style.color = '';        
     }, 100000);
+    preventDefault();
 })
 
 let introP = document.querySelector('body > div > header > p');
@@ -101,12 +102,79 @@ newBody.addEventListener('auxclick', function(event) {
 })
 
 // #10
-newBody.addEventListener('mouseover', function(event){
-    event.target.style.color = 'orange';
+// newBody.addEventListener('mouseover', function(event){
+//     event.target.style.color = 'orange';
 
-    setTimeout(function(){
-        event.target.style.color = '';
-    }, 2000);
+//     setTimeout(function(){
+//         event.target.style.color = '';
+//     }, 2000);
+// })
+
+let firstPick = document.querySelector('body > div > section.content-pick > div:nth-child(1)');
+// #11
+firstPick.addEventListener('mouseover', function(event){
+    // event.target.style.backgroundColor = 'orange';
+    event.target.style.color = 'yellow';
+    // setTimeout(function(){
+    //     event.target.style.color = '';
+    //     event.target.style.backgroundColor = '';
+    // }, 20000);
 })
+// #12
+firstPick.addEventListener('mouseleave', function(event){
+    event.target.style.backgroundColor = '';
+    event.target.style.color = '';
+})
+
+let secondPick = document.querySelector('body > div > section.content-pick > div:nth-child(2)');
+// #13
+secondPick.addEventListener('mouseover', function(event){
+    // event.target.style.backgroundColor = 'orange';
+    event.target.style.color = 'yellow';
+    // setTimeout(function(){
+    //     event.target.style.color = '';
+    //     event.target.style.backgroundColor = '';
+    // }, 20000);
+})
+// #14
+secondPick.addEventListener('mouseleave', function(event){
+    event.target.style.backgroundColor = '';
+    event.target.style.color = '';
+})
+
+let thirdPick = document.querySelector('body > div > section.content-pick > div:nth-child(3)');
+// #15
+thirdPick.addEventListener('mouseover', function(event){
+    // event.target.style.backgroundColor = 'orange';
+    event.target.style.color = 'yellow';
+    // setTimeout(function(){
+    //     event.target.style.color = '';
+    //     event.target.style.backgroundColor = '';
+    // }, 20000);
+})
+// #16
+thirdPick.addEventListener('mouseleave', function(event){
+    event.target.style.backgroundColor = '';
+    event.target.style.color = '';
+})
+
+
+let myBtns = document.getElementsByClassName('btn')['0', '1', '2'];
+// #something I lost count
+myBtns.addEventListener('click', function(event){
+    alert('You Made A Great Choice!')
+});
+
+
+// myBtns.addEventListener('mouseover', function(event){
+//     event.target.style.backgroundColor = 'skyblue';
+//     event.target.style.color = 'yellow';
+// });
+
+let theFoot = document.querySelector('body > footer')
+theFoot.addEventListener('click', function(event){
+    event.target.style.backgroundColor = 'skyblue';
+    event.target.style.color = 'orange';
+});
 
 
